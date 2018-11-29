@@ -25,8 +25,10 @@ server.use('*', (req, res, next) => {
 //^^^ this will always be the same
 
 //add in routes here!!!
+let productRoutes = require('./server/routes/products')
 
 
+server.use('/api/products', productRoutes)
 
 //default error handler 
 server.use('*', (error, req, res, next) => {
